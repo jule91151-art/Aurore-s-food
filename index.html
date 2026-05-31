@@ -119,7 +119,7 @@
                 <h2 class="section-title">Sucré & Salé <br><span class="text-gradient">Sublimés</span></h2>
                 <div class="quote-container">
                     <p class="quote-text">
-                        "Nous repoussons les frontières du fast-food classique. Chez Aurore's Food, chaque burger, chaque frite et chaque douceur sucrée est traitée comme une œuvre d'art gastronomique dans un écrin de pureté."
+                        "Nous repoussons les frontières du fast-food classique. Chez Aurore's Food, chaque burger, chaque wrap et chaque douceur sucrée est traitée comme une œuvre d'art gastronomique dans un écrin de pureté."
                     </p>
                     <div class="quote-author">
                         <div class="author-info">
@@ -129,7 +129,7 @@
                     </div>
                 </div>
                 <p class="about-description">
-                    Implanté au cœur de Porto-Novo au Bénin, Aurore's Food s'impose comme la référence de la street-gastronomie. Sous l'impulsion de sa fondatrice GUENDEHOU I.V. Aurore, nos équipes marient le confort incomparable du fast-food (burgers fondants, frites croustillantes) avec la finesse et l'audace de desserts miroir ou de milkshakes signature. Une expérience double, sucrée et salée, pensée pour surprendre.
+                    Implanté au cœur de Porto-Novo au Bénin, Aurore's Food s'impose comme la référence de la street-gastronomie. Sous l'impulsion de sa fondatrice GUENDEHOU I.V. Aurore, nos équipes marient le confort incomparable du fast-food (burgers fondants, wraps croquants, tacos gratinés) avec la finesse et l'audace de desserts miroir ou de milkshakes signature. Une expérience double, sucrée et salée, pensée pour surprendre.
                 </p>
                 <div class="philosophy-icons">
                     <div class="philo-item">
@@ -178,57 +178,228 @@
             <!-- Catégories de Menu -->
             <div class="menu-categories reveal-up">
                 <button class="category-btn active" data-filter="all">Toutes nos recettes</button>
-                <button class="category-btn" data-filter="sale">Salé (Burgers & Plats)</button>
-                <button class="category-btn" data-filter="sucre">Sucré (Douceurs & Desserts)</button>
+                <button class="category-btn" data-filter="starters">Entrées & Partages</button>
+                <button class="category-btn" data-filter="burgers">Burgers Premium</button>
+                <button class="category-btn" data-filter="wraps">Wraps & Tacos</button>
+                <button class="category-btn" data-filter="sides">Accompagnements</button>
+                <button class="category-btn" data-filter="sweets">Douceurs & Shakes</button>
             </div>
 
             <!-- Grille de Menu -->
             <div class="menu-grid reveal-up delay-200">
                 
-                <!-- Burger Impérial -->
-                <div class="menu-card" data-category="sale" onclick="openDishDetail('burger')">
+                <!-- 1. STARTERS - Aurore's Grand Platter -->
+                <div class="menu-card" data-category="starters" onclick="openDishDetail('grandPlatter')">
                     <div class="card-img-wrapper">
-                        <img src="assets/hero.png" alt="Le Burger Impérial" class="card-img">
+                        <img src="assets/main.png" alt="Aurore's Grand Platter" class="card-img">
                         <div class="card-img-overlay">
                             <span class="zoom-text">Voir les secrets</span>
                         </div>
                     </div>
                     <div class="card-content">
                         <div class="card-header">
-                            <span class="card-tag">Burger Signature</span>
-                            <span class="card-price">8 500 CFA</span>
+                            <span class="card-tag">Plateau à Partager</span>
+                            <span class="card-price">9 500 CFA</span>
                         </div>
-                        <h3 class="card-title">Le Grand Burger Impérial</h3>
+                        <h3 class="card-title">Aurore’s Grand Platter</h3>
                         <p class="card-excerpt">
-                            Pain brioché artisanal croustillant, steak de bœuf maturé juteux, cheddar fondant, bacon croustillant et sauce secrète d'Aurore au miel sauvage.
+                            Maxi assortiment gourmand de nos frites de poulet croustillantes, aiguillettes tendres, ailes de poulet épicées et onion rings dorés.
                         </p>
                         <div class="card-footer">
                             <span class="pairing-badge">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="wine-icon">
                                     <path d="M12 2v20M17 5H7a5 5 0 0 0 0 10h10a5 5 0 0 0 0-10z"/>
                                 </svg>
-                                Suggestion: Milkshake Chocolat Intense
+                                Inclus: Sauce Crémeuse Signature
                             </span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Plat d'Agneau -->
-                <div class="menu-card" data-category="sale" onclick="openDishDetail('lamb')">
+                <!-- 2. STARTERS - Zesty Chicken Wings -->
+                <div class="menu-card" data-category="starters" onclick="openDishDetail('chickenWings')">
                     <div class="card-img-wrapper">
-                        <img src="assets/main.png" alt="Filet d'agneau gastronomique" class="card-img">
+                        <img src="assets/starter.png" alt="Zesty Chicken Wings" class="card-img">
                         <div class="card-img-overlay">
                             <span class="zoom-text">Voir les secrets</span>
                         </div>
                     </div>
                     <div class="card-content">
                         <div class="card-header">
-                            <span class="card-tag">Bistronomie Salée</span>
-                            <span class="card-price">15 000 CFA</span>
+                            <span class="card-tag">Entrée Croustillante</span>
+                            <span class="card-price">4 500 CFA</span>
                         </div>
-                        <h3 class="card-title">L'Agneau Rôti en Croûte Fine</h3>
+                        <h3 class="card-title">Zesty Chicken Wings</h3>
                         <p class="card-excerpt">
-                            Filet d'agneau ultra-tendre cuit sous sa croûte dorée aux herbes fines, mousseline de petits pois primeurs et réduction de jus corsé.
+                            Ailes de poulet marinées, frites jusqu'à obtenir un croustillant parfait, enrobées de sauce BBQ piquante ou d'un duo ail-parmesan.
+                        </p>
+                        <div class="card-footer">
+                            <span class="pairing-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="wine-icon">
+                                    <path d="M12 2v20M17 5H7a5 5 0 0 0 0 10h10a5 5 0 0 0 0-10z"/>
+                                </svg>
+                                Au choix: Sauce BBQ Piquante ou Ail-Parmesan
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. STARTERS - Crispy Chicken Tenders -->
+                <div class="menu-card" data-category="starters" onclick="openDishDetail('chickenTenders')">
+                    <div class="card-img-wrapper">
+                        <img src="assets/main.png" alt="Crispy Chicken Tenders" class="card-img">
+                        <div class="card-img-overlay">
+                            <span class="zoom-text">Voir les secrets</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span class="card-tag">Le Favori Croustillant</span>
+                            <span class="card-price">4 000 CFA</span>
+                        </div>
+                        <h3 class="card-title">Crispy Chicken Tenders</h3>
+                        <p class="card-excerpt">
+                            Filets de poulet extra-tendres marinés dans nos épices secrètes, panés artisanalement et frits à la commande.
+                        </p>
+                        <div class="card-footer">
+                            <span class="pairing-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="wine-icon">
+                                    <path d="M12 2v20M17 5H7a5 5 0 0 0 0 10h10a5 5 0 0 0 0-10z"/>
+                                </svg>
+                                Servi avec: Sauce Crémeuse Signature
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. BURGERS - The Aurore Classic -->
+                <div class="menu-card" data-category="burgers" onclick="openDishDetail('auroreClassic')">
+                    <div class="card-img-wrapper">
+                        <img src="assets/hero.png" alt="The Aurore Classic" class="card-img">
+                        <div class="card-img-overlay">
+                            <span class="zoom-text">Voir les secrets</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span class="card-tag">Burger d'Exception</span>
+                            <span class="card-price">5 500 CFA</span>
+                        </div>
+                        <h3 class="card-title">The Aurore Classic</h3>
+                        <p class="card-excerpt">
+                            Généreux steak de bœuf juteux haché minute, cheddar, salade croquante, tomates fraîches, oignons rouges et notre sauce spéciale secrète.
+                        </p>
+                        <div class="card-footer">
+                            <span class="pairing-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="wine-icon">
+                                    <path d="M12 2v20M17 5H7a5 5 0 0 0 0 10h10a5 5 0 0 0 0-10z"/>
+                                </svg>
+                                Suggestion: Milkshake Fraise Sauvage
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. BURGERS - Smoky BBQ Burger -->
+                <div class="menu-card" data-category="burgers" onclick="openDishDetail('smokyBbq')">
+                    <div class="card-img-wrapper">
+                        <img src="assets/hero.png" alt="Smoky BBQ Burger" class="card-img">
+                        <div class="card-img-overlay">
+                            <span class="zoom-text">Voir les secrets</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span class="card-tag">Le Fumé Intense</span>
+                            <span class="card-price">6 500 CFA</span>
+                        </div>
+                        <h3 class="card-title">Smoky BBQ Burger</h3>
+                        <p class="card-excerpt">
+                            Steak de bœuf d'élite, double cheddar fondu, tranches de bacon de dinde croustillantes, onion rings dorés et notre sauce BBQ fumée.
+                        </p>
+                        <div class="card-footer">
+                            <span class="pairing-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="wine-icon">
+                                    <path d="M12 2v20M17 5H7a5 5 0 0 0 0 10h10a5 5 0 0 0 0-10z"/>
+                                </svg>
+                                Suggestion: Bière locale ou Coca-Cola Glacé
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. BURGERS - Crunchy Chicken Burger -->
+                <div class="menu-card" data-category="burgers" onclick="openDishDetail('crunchyChicken')">
+                    <div class="card-img-wrapper">
+                        <img src="assets/hero.png" alt="Crunchy Chicken Burger" class="card-img">
+                        <div class="card-img-overlay">
+                            <span class="zoom-text">Voir les secrets</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span class="card-tag">Le Favori Volaille</span>
+                            <span class="card-price">6 000 CFA</span>
+                        </div>
+                        <h3 class="card-title">Crunchy Chicken Burger</h3>
+                        <p class="card-excerpt">
+                            Filet de poulet mariné pané croustillant, salade de chou Coleslaw crémeuse faite maison, cornichons et sauce épicée d'Aurore.
+                        </p>
+                        <div class="card-footer">
+                            <span class="pairing-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="wine-icon">
+                                    <path d="M12 2v20M17 5H7a5 5 0 0 0 0 10h10a5 5 0 0 0 0-10z"/>
+                                </svg>
+                                Suggestion: Limonade Menthe-Citron
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. WRAPS - Street Style Tacos -->
+                <div class="menu-card" data-category="wraps" onclick="openDishDetail('streetTacos')">
+                    <div class="card-img-wrapper">
+                        <img src="assets/starter.png" alt="Street Style Tacos" class="card-img">
+                        <div class="card-img-overlay">
+                            <span class="zoom-text">Voir les secrets</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span class="card-tag">Inspiration Mexico</span>
+                            <span class="card-price">4 500 CFA</span>
+                        </div>
+                        <h3 class="card-title">Street Style Tacos</h3>
+                        <p class="card-excerpt">
+                            Trois tortillas de blé souples garnies au choix de bœuf effiloché juteux ou de poulet grillé, d'oignons rouges marinés et de crème de citron vert.
+                        </p>
+                        <div class="card-footer">
+                            <span class="pairing-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="wine-icon">
+                                    <path d="M12 2v20M17 5H7a5 5 0 0 0 0 10h10a5 5 0 0 0 0-10z"/>
+                                </svg>
+                                Option: Bœuf effiloché ou Poulet grillé
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. WRAPS - The Big Aurore Wrap -->
+                <div class="menu-card" data-category="wraps" onclick="openDishDetail('auroreWrap')">
+                    <div class="card-img-wrapper">
+                        <img src="assets/starter.png" alt="The Big Aurore Wrap" class="card-img">
+                        <div class="card-img-overlay">
+                            <span class="zoom-text">Voir les secrets</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span class="card-tag">Le Roulé Toasté</span>
+                            <span class="card-price">5 000 CFA</span>
+                        </div>
+                        <h3 class="card-title">The Big Aurore Wrap</h3>
+                        <p class="card-excerpt">
+                            Grande tortilla garnie de tenders de poulet croustillants, salade croquante, dés de tomates fraîches et filet de sauce miel-moutarde.
                         </p>
                         <div class="card-footer">
                             <span class="pairing-badge">
@@ -241,8 +412,92 @@
                     </div>
                 </div>
 
-                <!-- Dôme Chocolat -->
-                <div class="menu-card" data-category="sucre" onclick="openDishDetail('chocolateDome')">
+                <!-- 9. WRAPS - French Tacos Double -->
+                <div class="menu-card" data-category="wraps" onclick="openDishDetail('frenchTacos')">
+                    <div class="card-img-wrapper">
+                        <img src="assets/starter.png" alt="French Tacos Double" class="card-img">
+                        <div class="card-img-overlay">
+                            <span class="zoom-text">Voir les secrets</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span class="card-tag">Le Gourmand Absolu</span>
+                            <span class="card-price">6 500 CFA</span>
+                        </div>
+                        <h3 class="card-title">French Tacos Double</h3>
+                        <p class="card-excerpt">
+                            Grande galette scellée au gril, garnie de tenders de poulet croustillants et de frites, nappée de notre sauce fromagère et gratinée au cheddar.
+                        </p>
+                        <div class="card-footer">
+                            <span class="pairing-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="wine-icon">
+                                    <path d="M12 2v20M17 5H7a5 5 0 0 0 0 10h10a5 5 0 0 0 0-10z"/>
+                                </svg>
+                                Inclus: Frites et Sauce fromagère maison à l'intérieur
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. SIDES - Cheese & Garlic Fries -->
+                <div class="menu-card" data-category="sides" onclick="openDishDetail('garlicFries')">
+                    <div class="card-img-wrapper">
+                        <img src="assets/hero.png" alt="Cheese & Garlic Fries" class="card-img">
+                        <div class="card-img-overlay">
+                            <span class="zoom-text">Voir les secrets</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span class="card-tag">Accompagnement Signature</span>
+                            <span class="card-price">3 500 CFA</span>
+                        </div>
+                        <h3 class="card-title">Cheese & Garlic Fries</h3>
+                        <p class="card-excerpt">
+                            Grande portion de frites maison croustillantes, nappées d'une onctueuse sauce fromagère chaude au cheddar fondu et d'une pointe d'ail.
+                        </p>
+                        <div class="card-footer">
+                            <span class="pairing-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="wine-icon">
+                                    <path d="M12 2v20M17 5H7a5 5 0 0 0 0 10h10a5 5 0 0 0 0-10z"/>
+                                </svg>
+                                Idéal pour accompagner nos burgers
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11. SIDES - Spicy Fried Plantains (Alloco) -->
+                <div class="menu-card" data-category="sides" onclick="openDishDetail('alloco')">
+                    <div class="card-img-wrapper">
+                        <img src="assets/chef.png" alt="Spicy Fried Plantains Alloco" class="card-img">
+                        <div class="card-img-overlay">
+                            <span class="zoom-text">Voir les secrets</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span class="card-tag">Incontournable Bénin</span>
+                            <span class="card-price">2 500 CFA</span>
+                        </div>
+                        <h3 class="card-title">Spicy Fried Plantains (Alloco)</h3>
+                        <p class="card-excerpt">
+                            Bananes plantains locales frites, dorées, sucrées et fondantes, délicatement relevées d'une pointe d'épices douces de Porto-Novo.
+                        </p>
+                        <div class="card-footer">
+                            <span class="pairing-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="wine-icon">
+                                    <path d="M12 2v20M17 5H7a5 5 0 0 0 0 10h10a5 5 0 0 0 0-10z"/>
+                                </svg>
+                                Une douceur salée-sucrée unique
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 12. SWEETS - Le Dôme en Chocolat Miroir -->
+                <div class="menu-card" data-category="sweets" onclick="openDishDetail('chocolateDome')">
                     <div class="card-img-wrapper">
                         <img src="assets/dessert.png" alt="Dôme chocolat or" class="card-img">
                         <div class="card-img-overlay">
@@ -263,35 +518,7 @@
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="wine-icon">
                                     <path d="M12 2v20M17 5H7a5 5 0 0 0 0 10h10a5 5 0 0 0 0-10z"/>
                                 </svg>
-                                Suggestion: Jus de Passion Pur Pressé
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Crepe Dentelle -->
-                <div class="menu-card" data-category="sucre" onclick="openDishDetail('crepe')">
-                    <div class="card-img-wrapper">
-                        <img src="assets/starter.png" alt="Dessert Crêpe Gourmande" class="card-img">
-                        <div class="card-img-overlay">
-                            <span class="zoom-text">Voir les secrets</span>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <span class="card-tag">Douceur Fine • Sucré</span>
-                            <span class="card-price">4 500 CFA</span>
-                        </div>
-                        <h3 class="card-title">La Crêpe Dentelle et Caramel d'Or</h3>
-                        <p class="card-excerpt">
-                            Fine crêpe dentelle dorée, nappage caramel onctueux au beurre salé et éclats caramélisés de noix de cajou du Bénin.
-                        </p>
-                        <div class="card-footer">
-                            <span class="pairing-badge">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="wine-icon">
-                                    <path d="M12 2v20M17 5H7a5 5 0 0 0 0 10h10a5 5 0 0 0 0-10z"/>
-                                </svg>
-                                Suggestion: Milkshake Vanille Macadamia
+                                Suggestion: Jus de Fruits de saison pressés
                             </span>
                         </div>
                     </div>
@@ -395,8 +622,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="resNote">Détaillez vos choix salés/sucrés (Burgers, Dômes, Crêpes...)</label>
-                        <textarea id="resNote" rows="3" placeholder="Ex: 2 Burgers Impériaux et 1 Dôme Chocolat Or..."></textarea>
+                        <label for="resNote">Détaillez votre choix salé/sucré (Ex: 1 Grand Platter, 2 Smoky BBQ, 1 Alloco...)</label>
+                        <textarea id="resNote" rows="3" placeholder="Écrivez votre commande détaillée ici..."></textarea>
                     </div>
 
                     <div class="form-action">

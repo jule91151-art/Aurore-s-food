@@ -190,48 +190,137 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ==========================================================================
-// DATA DES RECETTES & MODAL IMMERSIF (SUCRÉ & SALÉ BÉNIN)
+// DATA DES RECETTES & MODAL IMMERSIF (MENU ACTUEL COMPLET)
 // ==========================================================================
 const dishesData = {
-    burger: {
-        tag: "Burger Signature • Salé",
-        title: "Le Grand Burger Impérial",
-        price: "8 500 CFA",
-        img: "assets/hero.png",
-        desc: "Le chef-d'œuvre salé d'Aurore. Un pain brioché croustillant préparé par nos artisans boulangers, abritant un généreux steak de bœuf local maturé et haché minute, nappé de véritable cheddar fondu premium, de tranches de bacon croustillant, et de notre emblématique sauce barbecue au miel sauvage local.",
-        ingredients: "Pain brioché doré au beurre, steak de bœuf maturé 150g, tranches de cheddar premium, bacon croustillant, sauce barbecue au miel béninois, oignons confits, roquette fraîche.",
-        pairing: "Milkshake Chocolat Intense ou Jus d'Ananas local pressé",
-        time: "10 minutes de préparation minutieuse"
-    },
-    lamb: {
-        tag: "Plateau Bistronomique • Salé",
-        title: "L'Agneau Rôti en Croûte Fine",
-        price: "15 000 CFA",
+    // --- ENTRÉES & PARTAGES ---
+    grandPlatter: {
+        tag: "Plateau à Partager • Entrée",
+        title: "Aurore’s Grand Platter",
+        price: "9 500 CFA",
         img: "assets/main.png",
-        desc: "Une interprétation raffinée pour nos amateurs de viandes nobles à Porto-Novo. Notre filet d'agneau ultra-tendre est rôti sous un fin manteau de chapelure croustillante parfumée aux herbes locales, accompagné d'une purée fine et onctueuse de petits pois parfumée à la menthe pour un contraste sublime.",
-        ingredients: "Filet d'agneau de première qualité, chapelure parfumée, mousseline de petits pois fins à la menthe poivrée, carottes glacées, réduction de jus corsé d'agneau au romarin.",
-        pairing: "Jus de Bissap Glacé maison ou Cocktail Passion infusé au Gingembre",
-        time: "20 minutes de cuisson"
+        desc: "Le roi incontesté de la convivialité chez Aurore's Food. Un plateau géant garni d'un maxi assortiment doré de nos meilleures spécialités : frites de poulet croustillantes, aiguillettes de poulet extra-tendres panées, ailes de poulet épicées (wings) bien enrobées, et rondelles d'oignons (onion rings) fondantes à la bière. Idéal pour débuter ensemble.",
+        ingredients: "Frites de poulet dorées, aiguillettes croustillantes, ailes de poulet épicées (wings), onion rings, servis avec notre fameuse sauce crémeuse signature.",
+        pairing: "Jus de Bissap Glacé au romarin ou Cocktail Passion",
+        time: "15 minutes de confection minute"
     },
+    chickenWings: {
+        tag: "Entrée Croustillante • Wings",
+        title: "Zesty Chicken Wings",
+        price: "4 500 CFA",
+        img: "assets/starter.png",
+        desc: "Ailes de poulet fraîches, frites minute jusqu'à obtenir une peau délicieusement soufflée et croustillante. Elles sont ensuite enrobées généreusement selon votre choix : soit d'une sauce BBQ piquante au miel béninois et piments doux, soit d'un mélange crémeux d'ail confit et de parmesan râpé.",
+        ingredients: "Ailes de poulet de qualité, marinade épicée, sauce BBQ piquante maison ou sauce onctueuse ail-parmesan.",
+        pairing: "Limonade fraîche pressée à la menthe ou Soda glacé",
+        time: "10 minutes de grillade intense"
+    },
+    chickenTenders: {
+        tag: "Le Croustillant Pur • Salé",
+        title: "Crispy Chicken Tenders",
+        price: "4 000 CFA",
+        img: "assets/main.png",
+        desc: "Nos filets de poulet ultra-tendres sont marinés durant 12 heures dans du lait de babeurre et des épices cajun, puis enrobés individuellement d'une panure dorée croustillante et frits minute sous vos yeux pour garantir un croustillant d'exception.",
+        ingredients: "Filets de poulet fermier marinés, panure secrète croustillante, sauce au choix.",
+        pairing: "Jus d'Ananas frais pressé ou Sauce Algérienne",
+        time: "8 minutes de friture dorée"
+    },
+
+    // --- BURGERS PREMIUM ---
+    auroreClassic: {
+        tag: "Burger d'Exception",
+        title: "The Aurore Classic",
+        price: "5 500 CFA",
+        img: "assets/hero.png",
+        desc: "Le pilier salé de notre gamme. Un steak de bœuf juteux haché à la minute, surmonté d'une double tranche de cheddar mature fondu, de salade romaine croquante, de tomates fraîches juteuses et d'oignons rouges, le tout nappé de notre sauce spéciale maison dans un pain brioché artisanal toasté au beurre.",
+        ingredients: "Pain brioché artisanal de Porto-Novo, steak de bœuf 150g, double cheddar, tomates fraîches, oignons, salade romaine, sauce spéciale maison.",
+        pairing: "Milkshake Vanille-Macadamia onctueux ou jus frais",
+        time: "10 minutes de cuisson minutieuse"
+    },
+    smokyBbq: {
+        tag: "Burger Fumé Premium",
+        title: "Smoky BBQ Burger",
+        price: "6 500 CFA",
+        img: "assets/hero.png",
+        desc: "Une expérience puissante pour les amateurs de grillades. Un steak de bœuf juteux surmonté de cheddar mature fondu, de tranches de bacon de dinde grillées croustillantes, d'onion rings croustillants disposés directement dans le burger, nappé d'une sauce BBQ richement fumée au miel sauvage du Bénin.",
+        ingredients: "Steak de bœuf premium, cheddar fondu, tranches de bacon de dinde fumé, onion rings croustillants, sauce BBQ fumée au miel, pain brioché.",
+        pairing: "Cocktail Passion-Gingembre frais",
+        time: "12 minutes de préparation"
+    },
+    crunchyChicken: {
+        tag: "Burger Croustillant Volaille",
+        title: "Crunchy Chicken Burger",
+        price: "6 000 CFA",
+        img: "assets/hero.png",
+        desc: "Pour les adeptes du poulet d'exception. Un filet de poulet mariné pané extra-croustillant, surmonté d'une salade de chou Coleslaw crémeuse et acidulée faite maison, de cornichons croquants et nappé d'une mayonnaise légèrement épicée d'Aurore.",
+        ingredients: "Filet de poulet mariné croustillant, salade de chou Coleslaw maison, cornichons fins, sauce mayonnaise spicy d'Aurore, pain brioché doré.",
+        pairing: "Thé Glacé maison à la Citronnelle",
+        time: "10 minutes"
+    },
+
+    // --- WRAPS & TACOS ---
+    streetTacos: {
+        tag: "Inspiration Mexico • Wraps",
+        title: "Street Style Tacos",
+        price: "4 500 CFA",
+        img: "assets/starter.png",
+        desc: "Trois tortillas de blé souples garnies généreusement de bœuf effiloché cuit à basse température pendant 8 heures ou de poulet grillé au charbon de bois, d'oignons rouges marinés au vinaigre de cidre et d'une crème fraîche acidulée au citron vert.",
+        ingredients: "3 tortillas de blé souples, bœuf effiloché juteux ou poulet grillé, coriandre fraîche, oignons pickles maison, crème de citron vert.",
+        pairing: "Jus d'Ananas frais pressé bien glacé",
+        time: "12 minutes de dressage"
+    },
+    auroreWrap: {
+        tag: "Le Roulé Toasté • Wraps",
+        title: "The Big Aurore Wrap",
+        price: "5 000 CFA",
+        img: "assets/starter.png",
+        desc: "Une tortilla de blé géante garnie de nos tenders de poulet croustillants chauds, de dés de tomates fraîches juteuses, d'une salade romaine croquante et d'un filet de notre sauce miel-moutarde onctueuse. Roulé serré et toasté sous la presse.",
+        ingredients: "Tortilla de blé géante, tenders croustillants panés, dés de tomates fraîches, salade romaine, sauce miel-moutarde maison.",
+        pairing: "Jus de Bissap Glacé de Porto-Novo",
+        time: "8 minutes"
+    },
+    frenchTacos: {
+        tag: "Le Gourmand Absolu • Tacos",
+        title: "French Tacos Double",
+        price: "6 500 CFA",
+        img: "assets/starter.png",
+        desc: "L'incontournable de la street-culture scellé sous la presse. Une double galette de blé garnie généreusement de tenders de poulet croustillants et de frites maison chaudes à l'intérieur, le tout entièrement noyé sous notre célèbre sauce fromagère onctueuse secrète faite maison et gratinée sous une couche de cheddar mature.",
+        ingredients: "Double galette de blé, tenders croustillants de poulet, frites dorées maison, sauce fromagère chaude maison, cheddar gratiné.",
+        pairing: "Boisson fraîche gazeuse classique",
+        time: "15 minutes de gratinage"
+    },
+
+    // --- SIDES & ACCOMPAGNEMENTS ---
+    garlicFries: {
+        tag: "Accompagnement Signature",
+        title: "Cheese & Garlic Fries",
+        price: "3 500 CFA",
+        img: "assets/hero.png",
+        desc: "Vos frites de pommes de terre classiques transformées en expérience divine. Une portion généreuse de nos frites de pommes de terre maison croustillantes, entièrement nappées d'une onctueuse sauce fromagère chaude au cheddar fondu et saupoudrées d'ail rôti croustillant et d'herbes fraîches.",
+        ingredients: "Frites de pommes de terre fraîches maison, sauce fromagère chaude, ail rôti croustillant, persil plat.",
+        pairing: "Idéal pour accompagner tous nos burgers premium",
+        time: "8 minutes"
+    },
+    alloco: {
+        tag: "Incontournable Bénin • Salé-Sucré",
+        title: "Spicy Fried Plantains (Alloco)",
+        price: "2 500 CFA",
+        img: "assets/chef.png",
+        desc: "Notre fierté locale à Porto-Novo. Des bananes plantains sélectionnées à parfaite maturité chez nos maraîchers locaux, découpées et frites jusqu'à obtention d'une magnifique couleur caramel dorée. Moelleuses et sucrées à l'intérieur, elles sont relevées d'un subtil sel d'épices douces.",
+        ingredients: "Bananes plantains mûres béninoises, frites dorées minute, mélange d'épices douces locales.",
+        pairing: "Se marie parfaitement avec nos Chicken Wings croustillantes !",
+        time: "8 minutes"
+    },
+
+    // --- DESSERTS & SWEETS ---
     chocolateDome: {
         tag: "Douceur Divine • Sucré",
         title: "Le Dôme en Chocolat et Or Noir",
         price: "5 500 CFA",
         img: "assets/dessert.png",
-        desc: "Le summum absolu du plaisir sucré chez Aurore's Food. Une coque sphérique brillante miroir en chocolat noir Criollo extra-raffiné, saupoudrée de feuilles d'or 24 carats comestibles. À l'intérieur, un cœur fondant chaud et voluptueux de framboises sauvages sur un lit craquant de sablé breton pur beurre.",
+        desc: "La signature finale d'Aurore's Food. Une coque miroir étincelante faite du meilleur chocolat Criollo, ornée de délicats éclats d'or pur. À l'intérieur, découvrez un cœur voluptueux et tiède de framboises sauvages sur un lit de sablé breton croustillant à la fleur de sel.",
         ingredients: "Chocolat noir Criollo 72% d'exception, coulis de framboises fraîches acidulées, sablé breton croustillant à la fleur de sel, éclats de feuilles d'or pur.",
-        pairing: "Jus de Passion frais pressé ou Boisson exotique glacée",
+        pairing: "Milkshake Vanille ou jus de fruits exotiques frais de saison",
         time: "15 minutes d'orfèvrerie pâtissière"
-    },
-    crepe: {
-        tag: "Douceur Fine • Sucré",
-        title: "La Crêpe Dentelle et Caramel d'Or",
-        price: "4 500 CFA",
-        img: "assets/starter.png",
-        desc: "Une douceur bretonne revisitée à la mode béninoise. Une crêpe fine croustillante dorée au beurre de baratte, rehaussée d'un généreux coulis de caramel fait maison au beurre salé et d'éclats de noix de cajou locales torréfiées.",
-        ingredients: "Pâte à crêpe fine artisanale, sucre de canne local, crème de caramel au beurre de Guérande, éclats croquants de noix de cajou du Bénin.",
-        pairing: "Milkshake Vanille Macadamia ou Thé Glacé à la Citronnelle",
-        time: "8 minutes de préparation express"
     }
 };
 

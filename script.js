@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, 4000);
 
-    // 2. CONSOLE BRAND LOGGING (Porto-Novo, Benin Concept)
+    // 2. CONSOLE BRAND LOGGING
     console.log(
         '%c AURORE\'S FOOD %c Street-Gourmet à Porto-Novo, Bénin • Directrice: GUENDEHOU I.V. Aurore %c',
         'background:#d4af37;color:#09090a;padding:5px 10px;border-radius:4px 0 0 4px;font-weight:bold;',
@@ -29,11 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
         'background:transparent'
     );
 
-    // 3. CURSEUR PERSONNALISÉ (Désactivé sur écran tactile mobile Android pour éviter les lags de rendu)
+    // 3. CURSEUR PERSONNALISÉ (Désactivé sur Android, actif sur PC)
     const cursor = document.getElementById('customCursor');
     const cursorDot = document.getElementById('customCursorDot');
     
-    // On ne l'active que sur les ordinateurs avec pointeurs précis
     if (cursor && cursorDot && window.matchMedia("(pointer: fine)").matches) {
         let mouseX = 0;
         let mouseY = 0;
@@ -62,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         updateCursor();
 
-        // Effet de survol sur les éléments interactifs
         const hoverables = document.querySelectorAll('a, button, .menu-card, input, select, textarea, .category-btn');
         hoverables.forEach(item => {
             item.addEventListener('mouseenter', () => {
@@ -73,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     } else {
-        // Cacher les éléments si mobile pour éviter les bugs d'affichage Android
         if (cursor) cursor.style.display = 'none';
         if (cursorDot) cursorDot.style.display = 'none';
     }
@@ -98,7 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
             navMenu.classList.toggle('active');
         });
 
-        // Fermer le menu lors du clic sur un lien
         const navLinks = document.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -202,7 +198,7 @@ const dishesData = {
         title: "Le Grand Burger Impérial",
         price: "8 500 CFA",
         img: "assets/hero.png",
-        desc: "Le chef-d'œuvre salé d'Aurore. Un pain brioché artisanal croustillant préparé par nos artisans boulangers, abritant un généreux steak de bœuf local maturé et haché minute, nappé de véritable cheddar fondu premium, de tranches de bacon fumé croustillant, et de notre emblématique sauce barbecue au miel sauvage local.",
+        desc: "Le chef-d'œuvre salé d'Aurore. Un pain brioché croustillant préparé par nos artisans boulangers, abritant un généreux steak de bœuf local maturé et haché minute, nappé de véritable cheddar fondu premium, de tranches de bacon croustillant, et de notre emblématique sauce barbecue au miel sauvage local.",
         ingredients: "Pain brioché doré au beurre, steak de bœuf maturé 150g, tranches de cheddar premium, bacon croustillant, sauce barbecue au miel béninois, oignons confits, roquette fraîche.",
         pairing: "Milkshake Chocolat Intense ou Jus d'Ananas local pressé",
         time: "10 minutes de préparation minutieuse"
@@ -217,16 +213,6 @@ const dishesData = {
         pairing: "Jus de Bissap Glacé maison ou Cocktail Passion infusé au Gingembre",
         time: "20 minutes de cuisson"
     },
-    scallops: {
-        tag: "Création Salée",
-        title: "La Saint-Jacques et Caviar d'Agrumes",
-        price: "12 000 CFA",
-        img: "assets/starter.png",
-        desc: "Une alliance terre et mer subtile qui illustre la créativité d'Aurore's Food. Les noix de Saint-Jacques sont saisies à la nacre en une seconde pour préserver leur moelleux incomparable, puis rehaussées de billes de caviar d'agrumes sauvages pétillant d'acidité.",
-        ingredients: "Noix de Saint-Jacques de plongée, billes de caviar d'agrumes frais, crème fine d'herbes sauvages du potager (aneth, menthe), éclats de noisettes sauvages torréfiées.",
-        pairing: "Cocktail Passion-Gingembre bien frais",
-        time: "12 minutes de dressage"
-    },
     chocolateDome: {
         tag: "Douceur Divine • Sucré",
         title: "Le Dôme en Chocolat et Or Noir",
@@ -234,8 +220,18 @@ const dishesData = {
         img: "assets/dessert.png",
         desc: "Le summum absolu du plaisir sucré chez Aurore's Food. Une coque sphérique brillante miroir en chocolat noir Criollo extra-raffiné, saupoudrée de feuilles d'or 24 carats comestibles. À l'intérieur, un cœur fondant chaud et voluptueux de framboises sauvages sur un lit craquant de sablé breton pur beurre.",
         ingredients: "Chocolat noir Criollo 72% d'exception, coulis de framboises fraîches acidulées, sablé breton croustillant à la fleur de sel, éclats de feuilles d'or pur.",
-        pairing: "Cocktail Fruité Pétillant ou jus de fruits exotiques frais de saison",
+        pairing: "Jus de Passion frais pressé ou Boisson exotique glacée",
         time: "15 minutes d'orfèvrerie pâtissière"
+    },
+    crepe: {
+        tag: "Douceur Fine • Sucré",
+        title: "La Crêpe Dentelle et Caramel d'Or",
+        price: "4 500 CFA",
+        img: "assets/starter.png",
+        desc: "Une douceur bretonne revisitée à la mode béninoise. Une crêpe fine croustillante dorée au beurre de baratte, rehaussée d'un généreux coulis de caramel fait maison au beurre salé et d'éclats de noix de cajou locales torréfiées.",
+        ingredients: "Pâte à crêpe fine artisanale, sucre de canne local, crème de caramel au beurre de Guérande, éclats croquants de noix de cajou du Bénin.",
+        pairing: "Milkshake Vanille Macadamia ou Thé Glacé à la Citronnelle",
+        time: "8 minutes de préparation express"
     }
 };
 
